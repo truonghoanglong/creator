@@ -16,7 +16,6 @@ body,
 html {
     overflow-x: hidden;
     background-color:#ffff;
-    height: 5000px;
 }
 .way{
     max-width: 1336px;
@@ -331,9 +330,6 @@ html {
 .paymentB .icon{
     margin-right: 12px;
 }
-.paymentB .paymentB-text{
-
-}
 .paymentB .paymentB-text .prompt{
     color: var(--text-color-violet-light);
     font-size: 16px;
@@ -397,5 +393,146 @@ html {
 .lunk-bg_model .content-lunk{
     width: 60%;
     padding-left: 20px;
+    z-index: 99;
 }
+
+/* tab */
+
+.page-content {
+	max-width: 700px; 
+    margin-top: 30px;
+}
+a {
+	color: #21D4FD; 
+	transition: all 0.3s;
+}
+
+.tabbed {
+	overflow-x: hidden; /* so we could easily hide the radio inputs */
+	padding-bottom: 16px;
+}
+
+.tabbed [type="radio"] {
+	/* hiding the inputs */
+	display: none;
+}
+
+.tabs {
+	display: flex;
+	align-items: stretch;
+	list-style: none;
+}
+.tab > label {
+	display: block;
+	margin-bottom: -1px;
+	padding: 12px 15px;
+	border: 1px solid #ccc;
+	background: #eee;
+	font-size: 16px; 
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;	
+	transition: all 0.3s;
+    border-radius: 20px 20px 0 0;
+    outline: none;
+    border: none;
+    padding: 20px 120px;
+    color: var(--text-color-violet);
+}
+.tab:hover label {
+    color: var(--text-color-violet);
+}
+
+.tab-content {
+	display: none;
+	color: #777;
+    background-color: #FFFFFF;
+    padding: 30px 59px;
+    width: 582px;
+    border-radius:0 0 20px 20px;
+}
+.tab-content .tab-content_item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tab-content .tab-content_item .icon{
+    margin-right: 20px;
+}
+.tab-content .tab-content_item .text{
+    color:var(--text-color-violet-light);
+    font-size: 12px;
+}
+.tab-content .tab-content_item .text strong{
+    font-size: 16px;
+    color: var(--text-color-violet);
+}
+.tab-content .tab-content_item .text p{
+    margin-top: 8px;
+}
+/* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
+.tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
+.tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
+.tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
+.tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
+.tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
+	border-bottom-color: #fff;
+	border-top-color: #B721FF;
+	background: #fff;
+	color: var(--text-color-violet);
+}
+
+.tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
+.tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
+.tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
+.tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) {
+	display: block;
+}
+/* endtab */
+
 /* END-LUNK */
+
+
+/* FOOTER */
+.footer{
+    margin-top: 82px;
+}
+.footerA{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 40px;
+}
+.footerA .footerA-left{
+    margin-top: 100px;
+}
+.footerA .footerA-left span{
+    margin-top: 50px;
+    font-size: 14px;
+}
+.footerA .footerA-left .image{
+    margin-top: 20px;
+}
+.footerA .footerA-left button{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 22px;
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.footerA .footerA-left button p{
+    margin-right: 20px;
+    color: var(--text-color-violet);
+    font-weight: 550;
+}
+.footerB{
+    width: 100%;
+    height: 705px;
+    margin-top:-268px;
+    position: relative;
+    z-index: 99;
+}
+/* END-FOOTER */
