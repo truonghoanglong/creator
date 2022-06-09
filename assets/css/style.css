@@ -16,7 +16,6 @@ body,
 html {
     overflow-x: hidden;
     background-color:#ffff;
-    height: 5000px;
 }
 .way{
     max-width: 1336px;
@@ -295,6 +294,7 @@ html {
     align-items: center;
     justify-content: center;
     box-shadow: 0 19px 38px rgba(49, 49, 49, 0.3), 0 15px 12px rgba(61, 60, 60, 0.22);
+    color: var(--text-color-light);
 }
 .note::after{
     content: "";
@@ -305,6 +305,64 @@ html {
     right: 125px;
     top:-36px;
 }
-
-
 /* END-PROMOTION */
+
+/* PAYMENT */
+.payment{
+    max-width: 1336px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 67px;
+    margin-top: 30px;
+}
+.paymentA{
+    padding-left: 255px;
+    width: 50%;
+}
+.paymentB{
+    padding: 0 240px 0 118px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.paymentB .icon{
+    margin-right: 12px;
+}
+.paymentB .paymentB-text{
+
+}
+.paymentB .paymentB-text .prompt{
+    color: var(--text-color-violet-light);
+    font-size: 16px;
+    margin-top: 5px;
+}
+.paymentB .paymentB-text .bank{
+    font-size: 26px;
+    color: var(--text-color-violet);
+    font-weight: 500;
+    margin-top: 20px;
+}
+.paymentB .paymentB-text .bank span{
+    font-size: 12px;
+    color: var(--text-color-violet);
+}
+.paymentB .paymentB-text .bank_note{
+    margin-top: 30px;
+    color: var(--text-color-light);
+}
+/* END-PAYMENT */
+
+/* LUNK */
+.lunk{
+    max-width: 1336px;
+    width: 100%;
+    margin: 0 auto;
+}
+.icon-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* END-LUNK */
