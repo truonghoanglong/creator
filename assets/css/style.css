@@ -16,6 +16,7 @@ body,
 html {
     overflow-x: hidden;
     background-color:#ffff;
+    height: 5000px;
 }
 .way{
     max-width: 1336px;
@@ -359,10 +360,42 @@ html {
     max-width: 1336px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 100px;
 }
 .icon-center{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 15px;
+}
+.center .smal{ 
+    font-size: 14px;
+    color: var(--text-color-light);
+}
+.center .strong{
+    font-size: 26px;
+    color: var(--text-color-violet);
+    margin-top: 5px;
+    font-weight: 550;
+}
+
+
+.lunk-bg{
+    margin-top: 20px;
+    height: 500px;
+}
+.lunk-bg_model{
+    position: relative;
+    display: flex;
+}
+.lunk-bg_model .img{
+    position: relative;
+    top:-60px;
+    left: 160px;
+    width: 40%;
+}
+.lunk-bg_model .content-lunk{
+    width: 60%;
+    padding-left: 20px;
 }
 /* END-LUNK */
