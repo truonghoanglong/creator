@@ -33,6 +33,7 @@ html {
     padding-left: 100px;
     padding-top: 30px;
     display: flex;
+    align-items: center;
 }
 .menu-item{
     display: flex;
@@ -72,17 +73,17 @@ html {
 .content{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .content .contentA{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-left: 190px;
-    width: 50%;
-    height: 100%;
+    padding-left: 185px;
+    padding-top: 160px;
 }
+
 .content .contentA .title{
     color:var(--text-color) ;
     padding-bottom: 120px;
@@ -90,8 +91,6 @@ html {
 .content .contentA .title .img{
     padding-top: 30px;
 }
-
-
 .content .contentA .btn{
     color:var(--text-color) ;
     padding-bottom: 200px;
@@ -113,7 +112,7 @@ html {
     cursor: pointer;
 }
 .content .contentB{
-    width: 50%;
+    margin-left: 220px;
 }
 /* ---END HEADER--- */
 
@@ -219,7 +218,7 @@ html {
 .searchB{
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 /* END_SEARCH */
 
@@ -533,6 +532,156 @@ a {
     height: 705px;
     margin-top:-268px;
     position: relative;
-    z-index: 99;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.footerB .main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+.footerB .main .main-logo{
+    z-index: 9;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerB .main .main-menu{
+    display: flex;
+    margin-top: 100px;
+}
+.footerB .main .main-menu .menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 70px;
+}
+.footerB .main .main-menu .menu-item p{
+    margin-top: 25px;
+}
+.footerB .main .main-menu .menu-item strong{
+    font-size: 21px;
+}
+.footerB .extra{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    border-top: 1px solid rgb(194, 194, 194);
+    padding: 20px 0;
 }
 /* END-FOOTER */
+
+
+
+/* REPONSIVE */
+@media (max-width:1200px){
+    .paymentB{
+        padding: 0 40px 0 20px;
+    }
+.lunk-bg_model{
+        gap: 60px;
+        margin-top: 60px;
+    }
+}
+
+
+@media (max-width:1000px){
+    .menu-item .item1{
+        display: none;
+    }
+    .search{
+        flex-direction: column;
+    }
+    .payment{
+        flex-direction: column;
+    }
+    .payment .paymentB{
+        padding: 0 140px;
+        text-align: center;
+    }
+    .lunk .icon-center{
+        margin-bottom: 70px;
+    }
+    .lunk-bg_model{
+        flex-direction: column-reverse;
+    }
+    .content-lunk{
+        margin: 0 auto;
+    }
+    .footerA .footerA-right{
+        display: none;
+    }
+}
+
+@media (max-width:780px){
+    .header{
+        height:1300px;
+    }
+    .menu-item input{
+        display: none;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content .contentA{
+       margin: 0;
+       padding: 0;
+       margin-top: 100px;
+    }
+    .content .contentA .btn{
+        padding: 0;
+    }
+    .content .contentB{
+        padding: 0;
+        margin-left: 120px;
+        margin-top: 120px;
+    }
+    .search{
+        padding: 0;
+        margin-top: 100px;
+    }
+    .searchB{
+        padding: 0;
+        margin: 0 auto;   
+    }
+    .promotion{
+        flex-direction: column;
+    }
+    .promotion .promotionA{
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .promotion .promotionA .promotionA-text{
+        padding: 0;
+    }
+    .promotion .promotionB{
+        margin-top: 50px;
+    }
+    .promotion .promotionB .promotionB-item .note{
+        display: none;
+    }
+    .payment{
+        margin-top: 50px;
+        flex-direction: column-reverse;
+    }
+    .payment .paymentA{
+        margin-top: 50px;
+    }
+    .payment .paymentB{
+        margin: 0;
+        padding: 0 70px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .tabs .tab .tab1,
+    .tabs .tab .tab2{
+        padding: 0;
+    }
+}
