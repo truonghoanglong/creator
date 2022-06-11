@@ -45,6 +45,12 @@ html {
 .menu-item li{
     margin: 0 20px;
     cursor: pointer;
+    position: relative;
+}
+.menu-item li img{
+    position: absolute;
+    left: 180px;
+    top: 17px;
 }
 .menu-item .item1{
     color:var(--text-color-light);
@@ -55,10 +61,17 @@ html {
     padding: 15px 20px;
     border-radius: 10px;
     border: none;
-    color:white;
+    color: #e6d8fc;
+    background-image: url(../img/icon-search\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 15px;
+    text-indent: 22px;
+}
+.menu-item li input:after{
+    content : url(../img/Icon\ awesome-angle-right.png) no-repeat;    
 }
 ::placeholder {
-    color:white;
+    color:#e6d8fc;
 }
 .menu-item .item3{
     padding: 15px 20px;
@@ -113,6 +126,18 @@ html {
 }
 .content .contentB{
     margin-left: 220px;
+}
+.header .header-s{
+    position: relative;
+}
+.header .lines{
+    color: var(--text-color);
+    width: 260px;
+    border-bottom: 1px solid rgb(139, 139, 139);
+    position: absolute;
+    top: 700px;
+    left: -60px;
+    transform: rotate(90deg);
 }
 /* ---END HEADER--- */
 
@@ -448,8 +473,9 @@ a {
 	color: #777;
     background-color: #FFFFFF;
     padding: 30px 59px;
-    width: 582px;
     border-radius:0 0 20px 20px;
+    max-width: 582px;
+    width: 100%;
 }
 .tab-content .tab-content_item{
     display: flex;
@@ -504,6 +530,7 @@ a {
 }
 .footerA .footerA-left{
     margin-top: 100px;
+    z-index: 99;
 }
 .footerA .footerA-left span{
     margin-top: 50px;
@@ -583,9 +610,12 @@ a {
     .paymentB{
         padding: 0 40px 0 20px;
     }
-.lunk-bg_model{
+    .lunk-bg_model{
         gap: 60px;
         margin-top: 60px;
+    }
+    .header .lines{
+        display: none;
     }
 }
 
@@ -616,11 +646,27 @@ a {
     .footerA .footerA-right{
         display: none;
     }
+    .footerA{
+        flex-direction: column;
+    }
+    .footerA-left{
+        margin-top: 580px !important;
+        margin-bottom: 300px !important;
+        margin: 0 auto;
+    }
+    .lunk-bg_model .img{
+        padding: 0 !important;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width:780px){
     .header{
         height:1300px;
+    }
+    .menu{
+        justify-content: space-between;
     }
     .menu-item input{
         display: none;
@@ -680,8 +726,127 @@ a {
         flex-direction: column;
         text-align: center;
     }
-    .tabs .tab .tab1,
-    .tabs .tab .tab2{
-        padding: 0;
+    .tabs .tab > label{
+        padding: 20px 101px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .main{
+        margin-top: 170px;
+        flex-direction: column;
+    }
+    .menu-item{
+        margin: 0 !important;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-item li img{
+        display: none;
+    }
+}
+@media (max-width:645px) {
+    .contentB{
+        padding-left: 170px !important;
+    }
+    .paymentA{
+        padding: 0 !important;
+        margin: 0 auto;
+    }
+    .promotionB{
+        width: auto;
+        margin: 0 auto;
+    }
+}
+@media (max-width:576px){
+    .content .btn{
+        margin: 0 auto;
+    }
+    .footerA-left{
+        margin-top: 650px !important;
+    }
+    .main-menu{
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:505px){
+    .lunk-bg_model .img{
+        margin-left: -50px;
+    }
+    .main-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .pick{
+        padding-left: 60px;
+    }
+}
+@media (max-width:485px) {
+    .menu{
+        padding: 10px 30px;
+        margin: 0;
+    }
+    .menu .menu-item{
+        padding: 0 !important;
+    }
+    .lunk-bg_model .img{
+        margin-left: -90px;
+    }
+    .main-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .footerA{
+        margin-top: 150px;
+    }
+    .pick{
+        padding-left: 40px;
+    }
+    .tab-content{
+        padding: 0 !important;
+    }
+}
+
+@media (max-width:375px){
+    .menu .menu-item{
+        padding: 0 !important;
+    }
+    .menu-item .item2{
+        margin: 0;
+    }
+    .menu-item .item3{
+        margin: 0 0 0 10px;
+        font-size: 10px;
+    }
+    .content .contentA .title{
+        text-align: center;
+        font-size: 13px;
+    }
+    .content .contentA .btn button{
+        width: 290px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content .contentB img{
+        width: 600px;
+        height: 400px;
+    }
+    .payment .paymentA{
+        display: flex;
+        justify-content: center;
+    }
+    .promotionB img{
+        width: 300px;
+        height: 200px;
+    }
+    .lunk-bg_model .img{
+        margin-left: -140px;
+    }
+    .search .searchB{
+        display: none;
+    }
+    .footerA-left{
+        margin-top: 450px !important;
     }
 }
