@@ -188,6 +188,7 @@ html {
     background-color: var(--primary-color);
     border: none;
     color: var(--text-color);
+    cursor: pointer;
 }
 .model-content .model-content_item .text-content{
     display: flex;
@@ -239,6 +240,7 @@ html {
     margin-right: 10px;
     margin-bottom: 12px;
     color: var(--text-color-violet);
+    cursor: pointer;
 }
 .searchB{
     width: 50%;
